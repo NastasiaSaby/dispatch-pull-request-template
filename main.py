@@ -1,9 +1,13 @@
 #!/usr/bin/python
 
 import os
+import sys
 from urlparse import urlparse
 
-projectName = raw_input("Git url : ")
+if len(sys.argv) > 1:
+   projectName = sys.argv[1]
+else:
+  projectName = raw_input("Git url : ")
 
 split = projectName.split("/")
 
